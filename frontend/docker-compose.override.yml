@@ -1,0 +1,8 @@
+# docker-compose.override.yml
+services:
+  frontend:
+    # Sobrescreve o comando para rodar o servidor de desenvolvimento
+    command: npm run dev
+    ports:
+      # Mapeia a porta do Vite (5173) em vez da porta do Nginx (80)
+      - "5173:5173"
